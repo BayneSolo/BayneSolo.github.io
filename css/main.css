@@ -7,13 +7,12 @@ h1 {
 	font-weight: bold;
 	font-size: 300%;
 	color: #f0f0f0;
-	padding-left: 10%;
+	padding-left: -10%;
 	padding-top: 10%;
 }
 
 a {
 	font-family: 'Helvetica', 'Arial', sans-serif;
 	color: white;
-	padding-left: 20%;
 	text-decoration: none;
 }
