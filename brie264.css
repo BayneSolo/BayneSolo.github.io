@@ -1,0 +1,252 @@
+* {box-sizing: border-box}
+body, html {
+    background-color: #303030;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+div {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+	font-weight: bold;
+	font-size: 60px;
+	color: #f0f0f0;
+}
+h1 {
+	font-family: 'Helvetica', 'Arial', sans-serif;
+    font-weight: bold;
+    color: #f0f0f0;
+    font-size: 60px;
+    text-align: left;
+    padding-left: 20px;
+}
+h2 {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-weight: bold;
+    color: #f0f0f0;
+    font-size: 40px;
+    text-align: left;
+    padding-left: 20px;
+}
+h3 {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-weight: bold;
+    color: #f0f0f0;
+    font-size: 20px;
+    padding-left: 20px;
+}
+p {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-weight: normal;
+    color: #f0f0f0;
+    font-size: 18px;
+    padding-left: 10px;
+}
+a {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-weight: normal;
+    color: #f0f0f0;
+    font-size: 18px;
+    padding-left: 30px;
+}
+hr {
+    width: 620px;
+}
+.photo {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.align {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-weight: normal;
+    color: #f0f0f0;
+    font-size: 18px;
+    padding-left: 30px;
+    line-height: 0.50;
+}
+.palign {
+    padding-left: 10px;
+}
+
+
+/*Main buttons in header*/
+
+
+.pagelink{
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+.pagelink:hover{
+    background-color: #5e5e5e;
+} 
+.pagecontent {
+    color: white;
+    display: none;
+    height: 100%;
+}
+
+#Home {background-color: #303030;}
+#Products {background-color: #303030;}
+#Location {background-color: #303030;}
+#News {background-color: #303030;}
+#GuestBook {background-color: #303030;}
+
+button {
+    background-color:transparent;
+    border-color: transparent;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:28px;
+    padding: 0px 15px 5px 15px;
+	text-decoration:none;
+	text-shadow:2px 3px 5px #000000;
+}
+button:hover {
+    background-color:transparent;
+    text-shadow:2px 3px 5px #ffffff;
+    border-color: transparent;
+}
+button:active {
+	position:relative;
+    top:1px;
+    border-color: transparent;
+}
+
+/*Page layout*/
+
+/*Header*/
+
+
+.gridbox {
+    display: grid;
+    grid-template-areas:
+    'image title title title title'
+    'image title title title title'
+    'buttons buttons buttons buttons buttons'
+    'content content content content content';
+    position: absolute;
+}
+.gridbox > div {
+    text-align: left;
+}
+.item1 {
+    grid-area: image;
+    width: 120px;
+    object-fit: contain;
+}
+.item2 {
+    grid-area: title;
+    padding-top: 5px;
+    width: 180px;
+}
+.item3 {
+    grid-area: buttons;
+    text-align: left;
+    white-space: nowrap;
+}
+.item4 {
+    grid-area: content;
+    width: 600px;
+}
+
+/*Guestbook*/
+
+.cgridbox {
+    display: grid;
+    grid-template-areas:
+    'leave leave leave'
+    'comment comment comment'
+    'name name button'
+    'hr hr hr'
+    'prev prev prev'
+    'comments comments comments';
+    position: absolute;
+    padding-left: 30px;
+}
+.gridbox > div {
+    text-align: left;
+}
+.citem1 {
+    grid-area: leave;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-weight: bold;
+    color: #f0f0f0;
+    font-size: 20px;
+    height: 30px;
+}
+.citem2 {
+    grid-area: comment;
+    padding-top: 5px;
+}
+.citem3 {
+    grid-area: name;
+    height: 30px;
+}
+.citem4 {
+    grid-area: button;
+    height: 30px;
+    background-color:transparent;
+    border-color: transparent;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:28px;
+	text-decoration:none;
+    text-shadow:2px 3px 5px #000000;
+}
+.citem41 {
+    grid-area: hr;
+    width: 580px;
+}
+.citem42 {
+    grid-area: prev;
+    height: 30px;
+    padding-left: 0px;
+}
+.citem5 {
+    grid-area: comments;
+}
+
+/*Shop Item*/
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 640px;
+}
+  
+.flex-container > div {
+    background-color: #858585;
+    justify-content: space-between;
+    width: 300px;
+    height: 440px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+.small {
+    font-size: 14px;
+}
+.bound {
+    width: 250px;
+    height: 200px;
+    overflow: hidden;
+    object-fit: contain;
+    background-color: white;
+}
+#productTitle {
+    height: 50px;
+}

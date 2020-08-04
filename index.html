@@ -1,16 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Ben Riedstra</title>
-<link rel="stylesheet" type="text/css" href="css/main.css"/>
-<meta charset="UTF-8">
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+<title>Dunedin Dairy</title>
+<link rel="stylesheet" type="text/css" href="brie264.css"/>
+<link rel="shortcut icon" type="image/x-icon" href="http://redsox.uoa.auckland.ac.nz/ds/logo-192x192.png"/>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<script src="brie264.js"></script>
 </head>
 <body>
 
-<h1>Ben Riedstra</h1>
+<div class="gridbox">
+    <div class="item1"><img src="http://redsox.uoa.auckland.ac.nz/ds/logo.svg" height="150px" class=photo></div>
+    <div class="item2">Dunedin Dairy</div>
+    <div class="item3">
+        <button class="topbutton" onclick="changePage('Home')">🏠</button>
+        <button class="topbutton" onclick="changePage('Products')">🛒</button>
+        <button class="topbutton" onclick="changePage('Location')">🗺️</button>
+        <button class="topbutton" onclick="changePage('News')">📰</button>
+        <button class="topbutton" onclick="changePage('GuestBook', this)">📝</button>
+        <hr>
+    </div>
+    <div class="item4">
+        <div id="Home" class="pagecontent">
+            <p>Dunedin Dairy offers the highest quality dairy products sourced locally and from around the world, with fast service and exceptional customer service. We strive to offer a wide selection to ensure all your dairy needs are catered for.</p>
+            <p>Our range is available 24/7 via our online store which has free overnight shipping or contactless pickup if you are in the area. Feel free to come into our store and browse the range in person, we'd love to see you.</p>
+            <img src="https://images.unsplash.com/photo-1453078977505-10c3e375c2a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" height="300px" class="center" border="1" alt='Example of cheese image missing'>
+        </div>
 
-<a href=about>About</a>	<a href=projects>Projects</a>
+        <div id="Products" class="pagecontent">
+            <h2>Shop</h2>
+            <hr>
+            <input type="text" id="search" onkeyup="searchProducts()" placeholder="🔎Search" size=37>
+            <div id="products" class="flex-container"></div>
+            <script>
+                getProducts();
+            </script>
+        </div>
 
+        <div id="Location" class="pagecontent">
+            <h2>Find Us</h2>
+            <img src="http://redsox.uoa.auckland.ac.nz/ds/map.png" height="400px" class="center" border="2" style="background-color:rgb(169, 255, 158);" alt='Map image missing'>
+            <h2>Contact Us</h2>
+            <div id="contacts"></div>
+            <script>
+                getContact();
+            </script>
+            <a href="http://redsox.uoa.auckland.ac.nz/ds/DairyService.svc/vcard">📇 Save to contacts</a>
+        </div>
+
+        <div id="News" class="pagecontent">
+            <div id="RSS"></div>
+            <script>
+                getNews();
+            </script>
+        </div>
+
+        <div id="GuestBook" class="pagecontent">
+            <h2>Guest Book</h2>
+            <div class="cgridbox">
+                <form name="fetch">
+                    <label for="comment" class="citem1">Leave us a comment!</label>
+                    <textarea id="comment" name="comment" class="citem2" placeholder="Write something!" rows="10" cols="80"></textarea>
+                    <input type="text" id="name" name="name" class="citem3" size=28 placeholder="What's your name?">
+                    <button type=submit class="citem4">💬</button>
+                </form>
+                <hr class=citem41>
+                <h3 class=citem42>Previous comments</h3>
+                <div id="postedComments" class="citem5"></div>
+            </div>
+            <script>
+                getComments();
+                submitComment();
+            </script>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    window.onload = function() {
+        setDefault();
+    };
+</script>
 </body>
 </html>
