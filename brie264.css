@@ -1,17 +1,16 @@
-* {box-sizing: border-box}
+
 body, html {
     background-color: #303030;
     font-family: 'Helvetica', 'Arial', sans-serif;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
 }
 div {
     font-family: 'Helvetica', 'Arial', sans-serif;
 	font-weight: bold;
 	font-size: 60px;
     color: #f0f0f0;
-    max-width: 650px;
+    max-width: 100%;
 }
 h1 {
 	font-family: 'Helvetica', 'Arial', sans-serif;
@@ -44,6 +43,7 @@ p {
     color: #f0f0f0;
     font-size: 18px;
     padding-left: 10px;
+    max-width: 600px;
 }
 a {
     font-family: 'Helvetica', 'Arial', sans-serif;
@@ -55,7 +55,7 @@ a {
     bottom: 20px;
 }
 hr {
-    max-width: 620px;
+    max-width: 100%;
 }
 .photo {
     -webkit-filter: invert(1);
@@ -76,6 +76,14 @@ hr {
 }
 .palign {
     padding-left: 10px;
+}
+#homepic {
+    position: relative;
+    bottom: -15px;
+    margin-bottom: 50px;
+}
+#RSS {
+    max-width: 600px;
 }
 
 
@@ -139,24 +147,26 @@ button:active {
 .gridbox {
     display: grid;
     grid-template-areas:
-    'image title title title title'
-    'image title title title title'
-    'buttons buttons buttons buttons buttons'
-    'content content content content content';
+    'image title title title'
+    'image title title title'
+    'buttons buttons buttons buttons'
+    'content content content content';
     position: absolute;
+    max-width: 100%;
 }
 .gridbox > div {
     text-align: left;
 }
 .item1 {
     grid-area: image;
-    width: 120px;
+    width: 20%;
     object-fit: contain;
 }
 .item2 {
     grid-area: title;
     padding-top: 5px;
-    width: 180px;
+    padding-left: 10px;
+    width: 25%;
 }
 .item3 {
     grid-area: buttons;
@@ -165,7 +175,7 @@ button:active {
 }
 .item4 {
     grid-area: content;
-    width: 600px;
+    width: 100%;
 }
 
 /*Guestbook*/
@@ -198,6 +208,7 @@ button:active {
 .citem2 {
     grid-area: comment;
     padding-top: 5px;
+    max-width: 100%;
 }
 .citem3 {
     grid-area: name;
