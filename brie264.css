@@ -11,6 +11,7 @@ div {
 	font-weight: bold;
 	font-size: 60px;
     color: #f0f0f0;
+    max-width: 650px;
 }
 h1 {
 	font-family: 'Helvetica', 'Arial', sans-serif;
@@ -27,6 +28,8 @@ h2 {
     font-size: 40px;
     text-align: left;
     padding-left: 20px;
+    position: relative;
+    bottom: 20px;
 }
 h3 {
     font-family: 'Helvetica', 'Arial', sans-serif;
@@ -48,6 +51,8 @@ a {
     color: #f0f0f0;
     font-size: 18px;
     padding-left: 30px;
+    position: relative;
+    bottom: 20px;
 }
 hr {
     max-width: 620px;
@@ -74,6 +79,7 @@ hr {
 }
 
 
+
 /*Main buttons in header*/
 
 
@@ -85,7 +91,7 @@ hr {
     cursor: pointer;
     padding: 0px 16px;
     font-size: 17px;
-    max-width: 25%;
+    width: 25%;
 }
 .pagelink:hover{
     background-color: #5e5e5e;
@@ -159,7 +165,7 @@ button:active {
 }
 .item4 {
     grid-area: content;
-    max-width: 600px;
+    width: 600px;
 }
 
 /*Guestbook*/
@@ -186,6 +192,8 @@ button:active {
     color: #f0f0f0;
     font-size: 20px;
     height: 30px;
+    position: relative;
+    bottom: 30px;
 }
 .citem2 {
     grid-area: comment;
@@ -194,6 +202,8 @@ button:active {
 .citem3 {
     grid-area: name;
     height: 30px;
+    position: relative;
+    bottom: 20px;
 }
 .citem4 {
     grid-area: button;
@@ -207,6 +217,9 @@ button:active {
 	font-size:28px;
 	text-decoration:none;
     text-shadow:2px 3px 5px #000000;
+    position: relative;
+    bottom: 15px;
+    right: 10px;
 }
 .citem41 {
     grid-area: hr;
@@ -232,8 +245,8 @@ button:active {
 .flex-container > div {
     background-color: #858585;
     justify-content: space-between;
-    width: 300px;
-    height: 440px;
+    width: 290px;
+    height: 470px;
     margin-right: 20px;
     margin-bottom: 20px;
     padding: 20px;
@@ -250,4 +263,32 @@ button:active {
 }
 #productTitle {
     height: 50px;
+    width: 270px;
+    padding-left: 0px;
+    padding-right: 20px;
+    text-align: center;
+}
+#buybutton {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-weight: normal;
+    color: #f0f0f0;
+    font-size: 20px;
+    background-color: black;
+    width: 290px;
+    height: 40px;
+    display: block;
+    justify-content: center;
+    padding: 0px;
+    position: relative;
+    right: 20px;
+    bottom: 10px;
+}
+#search {
+    position: relative;
+    bottom: 20px;
+    background-color: #858585;
+    height: 40px;
+}
+::placeholder {
+    color: black;
 }

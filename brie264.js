@@ -109,7 +109,8 @@ function getProducts(fetchURL="http://redsox.uoa.auckland.ac.nz/ds/DairyService.
             products += "<p class=\"small\">Country of Origin: " + xmlDoc.getElementsByTagName("Item")[i].childNodes[1].innerHTML + "</p>"; //Origin
             products += "<p class=\"small\">Product Type: " + xmlDoc.getElementsByTagName("Item")[i].childNodes[4].innerHTML + "</p>"; //Type
             products += "<p>$" + xmlDoc.getElementsByTagName("Item")[i].childNodes[2].innerHTML + "</p>"; //Price
-            products += "</div>"
+            products += "<button id=\"buybutton\">Buy</button>";
+            products += "</div>";
         }
         document.getElementById("products").innerHTML = products;
     });
